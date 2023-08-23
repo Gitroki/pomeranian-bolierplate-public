@@ -18,7 +18,7 @@ export function Exercise() {
         </p>
         <p>{string2}</p>
         <p>{string3}</p>
-        {/* Uzupełnij zanie korzystając ze zmiennych oraz operacji na stringach */}
+        {/* Uzupełnij zdanie korzystając ze zmiennych oraz operacji na stringach */}
         <p>Witaj ____! Jesteś ____ uzytkownikiem odwiedzającym tę stronę!</p>
       </section>
     </div>
