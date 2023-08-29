@@ -1,0 +1,45 @@
+.title {
+    color: black;
+    padding: 10px 10px 10px 0px;
+    font-weight: bold;
+    font-size: 2em;
+}
+.date {
+    color: var(--color-grey);
+    font-size: 2em;
+}
+.heading {
+    color: var(--color-grey);
+    font-weight: bold;
+    font-size: 1em;
+    padding: 20px 0px;
+}
+.index-down {
+    vertical-align: sub
+}
+.index-up {
+    vertical-align: super
+}
+.bold {
+    font-weight: bold
+}
+.quote {
+    quotes: '"' '"' "'" "'" 
+
+}
+.italic {
+    font-style: italic
+}
+.line {
+    text-decoration:line-through
+}
+.alot {
+    font-size: smaller;
+    font-weight: bold;
+}
+.list {
+    display: list-item
+}
+.underline {
+    text-decoration: underline;
+}
