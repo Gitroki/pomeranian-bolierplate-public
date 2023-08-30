@@ -1,0 +1,33 @@
+div.animation{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: blinking-square;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes blinking-square {
+    0% {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    100% {background-color: green;}
+}
+.all {
+    padding: 88px 105.6px;
+}
+.question {
+    color: var(--primary-primary, #FE3756);
+    font-family: Poppins; 
+    font-size: 57.2px;
+    font-style: normal;
+    font-weight: 800;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes blinking-square {
+    0% {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    100% {background-color: green;}
+}
