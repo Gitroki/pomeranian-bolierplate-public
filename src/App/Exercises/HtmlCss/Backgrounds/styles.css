@@ -1,0 +1,8 @@
+.bgs {
+    height: 100px;
+    width: 100px;
+    background: url('./jpeg.jpeg');
+    background-size: cover;
+   /* background-position: center center;
+    background-repeat: repeat; */
+}
