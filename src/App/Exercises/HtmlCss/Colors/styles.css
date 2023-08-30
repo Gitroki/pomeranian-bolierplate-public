@@ -1,0 +1,23 @@
+.colorName {
+    color: red;
+}
+
+.shortenHex {
+    color: #f00;
+}
+
+.hex {
+    color: #fc0000;
+}
+
+.rgb {
+    color: rgb(255, 0, 0);
+}
+
+.rgba {
+    color: rgb(255, 0, 0, 1);
+}
+
+.hsl {
+    color: hsl(0deg, 100%, 50%);
+}

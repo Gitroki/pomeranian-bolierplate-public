@@ -5,6 +5,7 @@ import { htmlCssRouterMetaData } from './SelectorsAndCascade/router-data';
 import { textFundamentsRouterMetaData } from './TextFundaments/router-data';
 import { standardTagsRouterMetaData } from './StandardTags/router-data';
 import { cssAnimationsRouterMetaData } from './CssAnimations/router-data';
+import { colorsRouterMetaData } from './Colors/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaData121220231,
@@ -12,5 +13,6 @@ export const blockRouterMetaData = [
   textFundamentsRouterMetaData,
   standardTagsRouterMetaData,
   cssAnimationsRouterMetaData,
+  colorsRouterMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
