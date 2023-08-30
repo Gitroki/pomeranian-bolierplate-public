@@ -5,4 +5,7 @@
     background-size: cover;
    /* background-position: center center;
     background-repeat: repeat; */
+    filter: grayscale(45%) sepia(31%) hue-rotate(238deg);
+-webkit-filter: grayscale(45%) sepia(31%) hue-rotate(238deg);
+-moz-filter: grayscale(45%) sepia(31%) hue-rotate(238deg);
 }
