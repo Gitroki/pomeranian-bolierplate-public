@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { CssAnimations } from './CssAnimations';
+import { HTMLTables } from './HTMLTables';
 
-export const cssAnimationsRouterMetaData = {
-  path: 'css-animations',
-  date: '30-08-02023',
-  linkLabel: 'Animacje',
-  element: <CssAnimations />,
-  tags: ['attribute', 'text', 'css', 'animations'],
+export const HTMLTablesRouterMetaData = {
+  path: 'HTML-Tables',
+  date: '01-09-02023',
+  linkLabel: 'Tabela',
+  element: <HTMLTables />,
+  tags: ['tables', 'text', 'css'],
 };
