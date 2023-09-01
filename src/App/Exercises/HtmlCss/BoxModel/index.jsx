@@ -20,6 +20,11 @@ export const BoxModel = () => {
       <span className="span_nr3">Przykładowy span</span>
       {/* Overflow */}
       <div className="div_nr3">Przykładowy div</div>
+      <hr />
+      <div>Hello world</div>
+      <div>Hello world</div>
+      <div>Hello world</div>
+      <div>Hello world</div>
     </div>
   );
 };
