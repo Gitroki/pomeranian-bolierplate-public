@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    
+}
+td, th {
+    padding: 10px;
+    border: 0;
+     
+}
+
+th {
+    background-color: #ccc !important;
+}
+.star {
+    text-align: right;
+    padding-right: 50px;
+}
+
+tr:nth-child(2n) {
+    background-color: #FFD5DB;
+}
+
