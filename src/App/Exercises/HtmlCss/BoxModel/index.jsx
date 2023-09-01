@@ -14,9 +14,12 @@ export const BoxModel = () => {
       {isVisible && <p className="p_nr2">Przykładowy p</p>}
       <p className={isNotVisible ? 'p_nr1' : 'p_nr2'}>Przykładowy p</p>
       <h1 className="h1_nr1">Przykładowy h1</h1>
+      {/* Display */}
       <span className="span_nr1">Przykładowy span</span>
       <span className="span_nr2">Przykładowy span</span>
       <span className="span_nr3">Przykładowy span</span>
+      {/* Overflow */}
+      <div className="div_nr3">Przykładowy div</div>
     </div>
   );
 };
