@@ -60,24 +60,25 @@ export const Blog = () => {
             as it slowly grew more visibly anachronistic and battered by endless
             scandals.
           </p>
-          <ul>
-            <li className="wp">
-              <a href="https://wiadomosci.wp.pl/to-zacieranie-sladow-chodzi-o-pakiety-wyborcze-sasina-6879848507329312a">
-                <b>WP.PL1</b>
-              </a>
-            </li>
-            <li className="wp">
-              <a href="https://www.wp.pl/">
-                <b>WP.PL2</b>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.onet.pl/film/onetfilm/tvn-wbil-szpile-tvp-pokazano-alternatywna-rzeczywistosc-telewizji-rzadowej/2ksezfp,681c1dfa">
-                ONET.PL
-              </a>
-            </li>
-          </ul>
         </div>
+        <ul>
+          <li className="wp">
+            <a href="https://wiadomosci.wp.pl/to-zacieranie-sladow-chodzi-o-pakiety-wyborcze-sasina-6879848507329312a">
+              <b>WP.PL1</b>
+            </a>
+          </li>
+          <li className="wp">
+            <a href="https://www.wp.pl/">
+              <b>WP.PL2</b>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.onet.pl/film/onetfilm/tvn-wbil-szpile-tvp-pokazano-alternatywna-rzeczywistosc-telewizji-rzadowej/2ksezfp,681c1dfa">
+              ONET.PL
+            </a>
+          </li>
+        </ul>
+
         <p className="author">
           <b>Radosława Majdan</b>
           <br></br>
