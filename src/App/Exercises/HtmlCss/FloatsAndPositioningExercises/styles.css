@@ -1,0 +1,42 @@
+.container {
+    position: relative;
+}
+
+.element {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.lorem2 {
+    padding: 0px 10px 0px 10px;
+}
+
+.lorem3 > p{
+   
+    background: var(--primary-primary-light, #FFD5DB);
+    margin: 6px;
+padding: 12.375px 19.938px;
+
+}
+
+.lorem4 > p{
+    padding: 12.375px 19.938px;
+    background: var(--gray-200, #EBEBEB);
+    margin: 6px;
+}
+
+.lorem5 > p{
+    background: var(--primary-primary-light, #FFD5DB);
+    margin: 0px;
+   
+}
+
+img {
+
+width: 402px;
+height: 350px;
+padding: 0px 24px;
+
+}

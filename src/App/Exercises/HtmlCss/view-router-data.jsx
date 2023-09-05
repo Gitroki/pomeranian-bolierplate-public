@@ -16,6 +16,7 @@ import { TablesTennisRouterMetaData } from './TablesTennis/router-data';
 import { ArrayRenderingRouterMetaData } from './ArrayRendering/router-data';
 import { ArrayRenderToTableRouterMetaData } from './ArrayRenderToTable/router-data';
 import { floatAndPositioningRouterMetaData } from './FloatsAndPositioning/router-data';
+import { floatAndPositioningExercisesRouterMetaData } from './FloatsAndPositioningExercises/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaData121220231,
@@ -33,5 +34,6 @@ export const blockRouterMetaData = [
   ArrayRenderingRouterMetaData,
   ArrayRenderToTableRouterMetaData,
   floatAndPositioningRouterMetaData,
+  floatAndPositioningExercisesRouterMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

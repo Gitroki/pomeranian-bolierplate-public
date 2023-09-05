@@ -27,6 +27,7 @@ export function App() {
           <Route path="blog/*" element={<Blog />} />
           <Route path="tech-stack/*" element={<TechStack />} />
           <Route path="FAQ/*" element={<FAQ />} />
+
           <Route path="calendar" element={<Calendar />} />
         </Route>
       </Routes>
