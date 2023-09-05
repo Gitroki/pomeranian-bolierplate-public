@@ -1,0 +1,24 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+  }
+  
+  tr {
+    background-color: #f2f2f2;
+    width: 100%;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  td, th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center; 
+  }
+  
+  th {
+    background-color: #ccc; 
+  }

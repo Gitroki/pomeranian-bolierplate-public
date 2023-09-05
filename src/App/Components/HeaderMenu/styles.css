@@ -1,0 +1,31 @@
+.headerMenu {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.headerMenu p {
+    margin: 0;
+}
+
+.headerMenu p:first-of-type {
+    font-weight: 700;
+}
+
+.headerMenu p:last-of-type {
+    font-size: 12px;
+    color: #8b8b8b;
+}
+
+.headerUser {
+    margin-right: 15px;
+}
+
+.headerMenuIcon {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: block;
+    margin-right: 15px;
+}
