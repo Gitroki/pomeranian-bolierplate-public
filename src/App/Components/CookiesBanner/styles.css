@@ -1,0 +1,48 @@
+.cookiess {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(35, 33, 61, 0.9);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+.cookiessContent {
+    max-width: 700px;;
+}
+.cookiess img  {
+    float: left;
+    margin: 10px 15px 0 0;
+}
+
+.cookiessContent h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.cookiessContent p {
+    margin: 0;
+    line-height: 1.5;
+}
+.cookiesButton {
+    padding: 20px 36px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0;
+}
+
+.buttonPrimary {
+    color: #fff;
+    background-color: #FE3756;
+    margin-right: 16px;
+}
+
+.buttonSecondary {
+    color: #FE3756;
+    background-color: #fff;
+}
