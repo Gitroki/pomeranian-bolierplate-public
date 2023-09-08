@@ -1,10 +1,7 @@
 export const JsNumbers = () => {
   const myNumber = 1.666;
 
-  const myInt =
-    parseInt(
-      myNumber
-    ); /*zaokraglanie liczby/wartosc przed przecinkiem czy przed e */
+  const myInt = parseInt(myNumber);
 
   const myFloat = parseFloat(myNumber);
   return (
