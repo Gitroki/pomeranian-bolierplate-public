@@ -1,0 +1,42 @@
+.big-box {
+    display: flex;
+    flex-direction: column; 
+    font-family: Poppins;
+}
+.moles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    font-family: Poppins;
+    gap: 24px;
+    width: 400px;
+}
+button {
+    border-radius: 10px;
+    width: 110px;
+    padding: 10px;
+    color: white;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    background:  #23213D;
+}
+
+h4 {
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.blue-button {
+    background:  #23213D;   
+}
+
+.pink-button {
+    background: #FE3756;
+}

@@ -209,6 +209,9 @@ export const JsFunctionBasics = () => {
     ZliczWystapienia(1)(1, 1, 2, 3, 5, 7, 8, 1, {}, [], 'test', false)
   );
 
+  console.log('aaaa');
+  console.log(ZliczWystapienia(1)(1, 1, 2, 3, 5, 7, 8, 1));
+
   // 7. stwórz funkcję calculateWithChar, która przyjmuje jako argument jeden operator matematyczne
   // '+', '-', '*', '/'
   // funkcja calculateWithChar ma zwracać funkcję, która przyjmuje dwie liczby jako argumenty
