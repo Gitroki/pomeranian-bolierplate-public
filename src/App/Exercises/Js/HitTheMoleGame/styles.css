@@ -40,3 +40,52 @@ h4 {
 .pink-button {
     background: #FE3756;
 }
+.window-container {
+    border-radius: 10px;
+    width: 110px;
+    color: black;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #EBEBEB;
+    display: flex;
+    flex-direction: column; 
+    
+}
+.moless {
+    display: flex;
+    flex-direction: column; 
+}
+.text-in-container {
+    text-align: center;
+    margin: 0;
+    line-height: 30px;
+}
+
+.gray-square {
+    width: 102px;
+    height: 102px;
+    border-radius: 8px;
+    background: #EBEBEB;
+    display: flex;
+    
+}
+.gray-squares {
+    display: flex;
+    flex-direction: wrap;
+    gap: 10px;
+    width: 600px;
+}
+.game-view-box{
+    display: flex;
+    font-family: Poppins;
+    
+}
+
+.mole-picture {
+    align-self: center;
+    width: 91.43px;
+    height: 63.24px;
+    top: 19.72px;
+    left: 117.61px;
+}
