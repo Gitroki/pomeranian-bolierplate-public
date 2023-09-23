@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button1 } from './Buttons';
 import { Button2 } from './Buttons';
 import { Button3 } from './Buttons';
-export const MenuView = () => {
+export const MenuView = ({ showGameView }) => {
   const [timeButton, setTimeButton] = useState(null);
   function diffrentColor(event) {
     setTimeButton(event.target.id);
@@ -11,10 +11,7 @@ export const MenuView = () => {
   function changeColor(event) {
     setMoleButton(event.target.id);
   }
-  const [startButton, setStartButton] = useState(null);
-  function pinkColor(event) {
-    setStartButton(event.target.id);
-  }
+
   return (
     <div>
       <div>
@@ -73,12 +70,7 @@ export const MenuView = () => {
         <div className="moles">
           <h4>PRZYCISKI STERUJĄCE</h4>
           <div className="button-container">
-            <Button3
-              id={7}
-              pinkColor={pinkColor}
-              startButton={startButton}
-              label={'Start'}
-            />
+            <Button3 id={7} showGameView={showGameView} label={'Start'} />
           </div>
         </div>
       </div>

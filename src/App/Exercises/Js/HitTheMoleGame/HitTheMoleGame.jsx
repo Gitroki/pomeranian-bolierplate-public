@@ -4,14 +4,22 @@ import { MenuView } from './MenuView';
 import { GameView } from './GameView';
 
 export function HitTheMoleGame() {
+  const [showMenuView, setShowMenuView] = useState(true);
+
+  function showGameView() {
+    setShowMenuView(false);
+  }
+  function changeToMenuView() {
+    setShowMenuView(true);
+  }
+
   return (
     <>
-      <div>
-        <MenuView />
-      </div>
-      <div>
-        <GameView />
-      </div>
+      {showMenuView === true ? (
+        <MenuView showGameView={showGameView} />
+      ) : (
+        <GameView changeToMenuView={changeToMenuView} />
+      )}
     </>
   );
 }

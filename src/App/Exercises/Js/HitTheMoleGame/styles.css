@@ -50,42 +50,46 @@ h4 {
     background-color: #EBEBEB;
     display: flex;
     flex-direction: column; 
+    padding: 10px;
+    align-items: center;
     
 }
-.moless {
-    display: flex;
-    flex-direction: column; 
-}
-.text-in-container {
-    text-align: center;
-    margin: 0;
-    line-height: 30px;
-}
-
 .gray-square {
     width: 102px;
     height: 102px;
     border-radius: 8px;
     background: #EBEBEB;
     display: flex;
+    justify-content: center;
+    
+}
+.green-square {
+    width: 102px;
+    height: 102px;
+    border-radius: 8px;
+    background: #E2FBD7;
+    display: flex;
+    justify-content: center;
+    
+}
+.red-square {
+    width: 102px;
+    height: 102px;
+    border-radius: 8px;
+    background: #F3AEA8;
+    display: flex;
+    justify-content: center;
     
 }
 .gray-squares {
-    display: flex;
-    flex-direction: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
     width: 600px;
 }
-.game-view-box{
+.mole-picture {
     display: flex;
-    font-family: Poppins;
-    
+    width: 91.43px;
 }
 
-.mole-picture {
-    align-self: center;
-    width: 91.43px;
-    height: 63.24px;
-    top: 19.72px;
-    left: 117.61px;
-}
+

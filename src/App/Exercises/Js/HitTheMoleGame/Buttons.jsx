@@ -21,13 +21,9 @@ export const Button2 = ({ id, changeColor, moleButton, label }) => {
     </button>
   );
 };
-export const Button3 = ({ id, pinkColor, startButton, label }) => {
+export const Button3 = ({ id, showGameView, label }) => {
   return (
-    <button
-      id={id}
-      onClick={pinkColor}
-      className={startButton == id ? 'pink-button' : 'blue-button'}
-    >
+    <button id={id} onClick={showGameView}>
       {label}
     </button>
   );
