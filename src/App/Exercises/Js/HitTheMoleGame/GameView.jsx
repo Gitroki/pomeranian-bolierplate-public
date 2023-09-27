@@ -15,7 +15,14 @@ const initialArray = [
   { id: 10, isMolePresent: false, isSquareClicked: false },
 ];
 
-export const GameView = ({ changeToMenuView }) => {
+export const GameView = ({
+  changeToMenuView,
+  howManyMoles,
+  howLong,
+  count,
+  setCount,
+  changeToGameEnd,
+}) => {
   const [timeButton, setTimeButton] = useState(null);
   function diffrentColor(event) {
     setTimeButton(event.target.id);
@@ -24,11 +31,14 @@ export const GameView = ({ changeToMenuView }) => {
   const [boardGameData, setBoardGameData] = useState(initialArray);
 
   function shuffleBoard() {
-    let randomNextMolePosition = randomNumber(boardGameData.length);
+    let randomNextMolePositions = randomNumbers(
+      howManyMoles,
+      boardGameData.length
+    );
     setBoardGameData(
       boardGameData.map((element, index) => {
         element.isMolePresent = false;
-        if (index == randomNextMolePosition) {
+        if (randomNextMolePositions.includes(index)) {
           element.isMolePresent = true;
         }
         element.isSquareClicked = false;
@@ -37,15 +47,31 @@ export const GameView = ({ changeToMenuView }) => {
     );
   }
 
-  // can return number from 0 to numberTo - 1
-  function randomNumber(numberTo) {
-    return Math.floor(Math.random() * numberTo);
+  function randomNumbers(numberTo, howManyNumbersToGenerate) {
+    const list = new Set();
+    while (list.size < numberTo)
+      list.add(Math.floor(Math.random() * howManyNumbersToGenerate));
+    return Array.from(list);
   }
+  const [gameTimeInSeconds, setGameTimeInSeconds] = useState(howLong * 60);
 
+  let xxxx;
   useEffect(() => {
-    setInterval(() => {
-      return shuffleBoard();
-    }, 1500);
+    if (!xxxx) {
+      xxxx = setInterval(() => {
+        setGameTimeInSeconds((prevTime) => {
+          if (prevTime <= 0) {
+            changeToGameEnd();
+            clearInterval(xxxx);
+            return 0;
+          } else {
+            return prevTime - 1;
+          }
+        });
+
+        return shuffleBoard();
+      }, 1000);
+    }
   }, []);
 
   function getColorOfKafelek(element) {
@@ -67,6 +93,12 @@ export const GameView = ({ changeToMenuView }) => {
         return element;
       })
     );
+    let clickedElement = boardGameData
+      .filter((element) => element.id == clickedElementId)
+      .at(0);
+    if (clickedElement.isMolePresent == true) {
+      setCount((prev) => prev + 1);
+    }
   }
 
   function drawBoard() {
@@ -99,13 +131,13 @@ export const GameView = ({ changeToMenuView }) => {
         <div className="moles">
           <h4>CZAS DO KOŃCA</h4>
           <div class="button-container">
-            <div className="window-container">1:36</div>
+            <div className="window-container">{gameTimeInSeconds}</div>
           </div>
         </div>
         <div className="moles">
           <h4>WYNIK</h4>
           <div class="button-container">
-            <div className="window-container">13</div>
+            <div className="window-container">{count}</div>
           </div>
         </div>
       </div>

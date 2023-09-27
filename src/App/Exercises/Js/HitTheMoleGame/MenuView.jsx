@@ -2,14 +2,30 @@ import { useState } from 'react';
 import { Button1 } from './Buttons';
 import { Button2 } from './Buttons';
 import { Button3 } from './Buttons';
-export const MenuView = ({ showGameView }) => {
+export const MenuView = ({
+  showGameView,
+  setHowManyMoles,
+  setHowLong,
+  count,
+  isGameEnd,
+  howLong,
+}) => {
   const [timeButton, setTimeButton] = useState(null);
   function diffrentColor(event) {
     setTimeButton(event.target.id);
   }
   const [moleButton, setMoleButton] = useState(null);
+
   function changeColor(event) {
     setMoleButton(event.target.id);
+  }
+
+  function endTekst() {
+    if (isGameEnd === true) {
+      return <div className="textEnd"></div>;
+    } else {
+      return '';
+    }
   }
 
   return (
@@ -20,6 +36,14 @@ export const MenuView = ({ showGameView }) => {
           którym się pojawił.
         </h4>
       </div>
+      {count > 0 && (
+        <div className="textEnd">
+          <h2>
+            Gratulację! Twój wynik to {count} złapane krety w czasie {howLong}{' '}
+            minut!
+          </h2>
+        </div>
+      )}
       <div className="big-box">
         <div className="moles">
           <h4>CZAS GRY</h4>
@@ -29,18 +53,24 @@ export const MenuView = ({ showGameView }) => {
               diffrentColor={diffrentColor}
               timeButton={timeButton}
               label={'1 minuta'}
+              setHowLong={setHowLong}
+              time={1}
             />
             <Button1
               id={2}
               diffrentColor={diffrentColor}
               timeButton={timeButton}
               label={'2 minuty'}
+              setHowLong={setHowLong}
+              time={2}
             />
             <Button1
               id={3}
               diffrentColor={diffrentColor}
               timeButton={timeButton}
               label={'3 minuty'}
+              setHowLong={setHowLong}
+              time={3}
             />
           </div>
         </div>
@@ -52,18 +82,24 @@ export const MenuView = ({ showGameView }) => {
               changeColor={changeColor}
               moleButton={moleButton}
               label={'1 kret'}
+              mole={1}
+              setHowManyMoles={setHowManyMoles}
             />
             <Button2
               id={5}
               changeColor={changeColor}
               moleButton={moleButton}
               label={'2 krety'}
+              mole={2}
+              setHowManyMoles={setHowManyMoles}
             />
             <Button2
               id={6}
               changeColor={changeColor}
               moleButton={moleButton}
               label={'3 krety'}
+              mole={3}
+              setHowManyMoles={setHowManyMoles}
             />
           </div>
         </div>
