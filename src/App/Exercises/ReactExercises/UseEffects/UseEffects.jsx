@@ -13,7 +13,7 @@ export const UseEffects = () => {
 
   useEffect(() => {
     // zaleznosc "zaleznosc"
-  }, [zalezosc]); // Kod wykona sie gdy wartosc zaleznosc ulegnie zmianie (np. stan) wykona sie kod wewantrz useEffect
+  }, []); // w [zaleznosc] Kod wykona sie gdy wartosc zaleznosc ulegnie zmianie (np. stan) wykona sie kod wewantrz useEffect
 
   useEffect(() => {
     return () => {};
