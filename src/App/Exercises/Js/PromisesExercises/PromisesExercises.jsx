@@ -1,4 +1,8 @@
+import { useEffect, useState } from 'react';
+
 export const PromisesExercises = () => {
+  const [myResult, setMyResult] = useState(null);
+
   const myPromise = () =>
     new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -12,15 +16,17 @@ export const PromisesExercises = () => {
       }, 2000);
     });
 
+  useEffect(() => {}, []);
+
   myPromise()
     .then((value) => {
-      console.log(value);
+      setMyResult(value);
     })
     .catch((err) => {
-      console.log(err);
+      setMyResult(err);
     })
     .finally(() => {
       console.log('koniec');
     });
-  return <div>Promise</div>;
+  return <div>Rezultat: {myResult}</div>;
 };
