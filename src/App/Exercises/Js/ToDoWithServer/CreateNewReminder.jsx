@@ -1,15 +1,17 @@
+//UTWORZYLISMY NOWY KOMPONENT Z MAKIETA 5A I FUNKCJONALNOSCIA GDZIE DODAJEMY TODOSY
+
 import { useState } from 'react';
 import { sendData } from './api/todoListApi';
 
 export const CreateNewReminder = ({ backFunction, refreshFunction }) => {
-  //2. Stworzyc useState i podpiac je pod odpowiednie inputy w formularzu
+  //2. Stworzyc useState i podpiac je pod odpowiednie inputy w formularzu - zrobione
   const [author, setAuthor] = useState('');
   const [title, setTitle] = useState('');
   const [note, setNote] = useState('');
   const [getError, setGetError] = useState(null);
-  //3. Podpiac funkcje backFunction i createTodo
 
-  //3.1 Przygotować dane w odpowiednim obiekcie (patrz swagger)
+  //3. Podpiac funkcje backFunction i createTodo - zrobione
+  //3.1 Przygotować dane w odpowiednim obiekcie (patrz swagger) - zrobione
   async function createTodo() {
     const data = {
       title: title,
@@ -25,7 +27,7 @@ export const CreateNewReminder = ({ backFunction, refreshFunction }) => {
         setGetError(error);
       });
   }
-  //1. Zrobic makieta 5A
+  //1. Zrobic makieta 5A - zrobione jakotako
   return (
     <form onSubmit={createTodo}>
       <div className="todo-window">

@@ -7,36 +7,8 @@ import { ErrorView } from './ErrorView';
 import { Loader } from './Loader';
 import { CreateNewReminder } from './CreateNewReminder';
 
-// const data = [
-//   {
-//     id: 1,
-//     title: 'Zamówić catering',
-//     createdAt: '2021-05-22T11:20:22.935Z',
-//     author: 'Wojtek',
-//     isDone: false,
-//     note: 'Dla mnie wege, dla Pauliny ryba + wege. Zrobić zamówienie, zapłacić.',
-//   },
-//   {
-//     id: 2,
-//     title: 'Kupić spray na kleszcze',
-//     createdAt: '2021-05-22T11:20:22.935Z',
-//     author: 'Wojtek',
-//     isDone: false,
-//     note: 'Pamiętać, żeby sprawdzić skład i termin ważności preparatu. Zadzwonić do weta, żeby się upewnić, czy mają na stanie.',
-//   },
-//   {
-//     id: 3,
-//     title: 'Szczepienie kitku',
-//     createdAt: '2021-05-22T11:20:22.935Z',
-//     doneDate: '2022-05-22T11:20:22.935Z',
-//     author: 'Wojtek',
-//     isDone: true,
-//     note: 'Sprawdzić w książeczce zdrowia, kiedy Nala była ostatni raz szczepiona i umówić się z naszym weterynarzem.',
-//   },
-// ];
-
 export const ToDoWithServer = () => {
-  const [isFormVisible, setIsFormVisible] = useState(false); //
+  const [isFormVisible, setIsFormVisible] = useState(false);
   const [getTodoData, setGetTodoData] = useState([]);
   const [getIsLoading, setGetIsLoading] = useState(true); //is bo Boolean
   const [getError, setGetError] = useState(null);
