@@ -1,11 +1,11 @@
 import './styles.css';
-import checkGreenIcon from './checkGreenIcon.svg';
-import checkIcon from './checkIcon.svg';
-import binIcon from './binIcon.svg';
-import redBinIcon from './redBinIcon.svg';
-import pencilIcon from './pencilIcon.svg';
 import { fetchData, sendData } from './api/todoListApi';
 import { useEffect, useState } from 'react';
+import { ToDoItem } from './ToDoItem';
+import { Congrats } from './Congrats';
+import { ErrorView } from './ErrorView';
+import { Loader } from './Loader';
+import { CreateNewReminder } from './CreateNewReminder';
 
 // const data = [
 //   {
@@ -36,6 +36,7 @@ import { useEffect, useState } from 'react';
 // ];
 
 export const ToDoWithServer = () => {
+  const [isFormVisible, setIsFormVisible] = useState(false); //
   const [getTodoData, setGetTodoData] = useState([]);
   const [getIsLoading, setGetIsLoading] = useState(true); //is bo Boolean
   const [getError, setGetError] = useState(null);
@@ -57,63 +58,44 @@ export const ToDoWithServer = () => {
     fetchTodoData();
   }, [getKickComponent]);
 
-  function handleDelete(paramId) {
-    sendData(`api/todo/${paramId}`, [], 'DELETE').then((response) =>
-      setGetKickComponent(response)
-    );
+  const showNewReminderView = () => setIsFormVisible(true);
+
+  // function handleDelete(paramId) {
+  //   sendData(`api/todo/${paramId}`, [], 'DELETE').then((response) =>
+  //     setGetKickComponent(response)
+  //   );
+  // }
+
+  if (getError) {
+    return <ErrorView />;
   }
+
+  if (getIsLoading) {
+    return <Loader />;
+  }
+
+  if (isFormVisible) {
+    return <CreateNewReminder backFunction={setIsFormVisible} />;
+  }
+
   return (
     <div>
       <div className="all-reminder">
         {getError && getError}
         {getTodoData.map((obj) => {
           return (
-            <div className={obj.isDone ? 'reminder-done' : 'reminder'}>
-              <div className="reminder-container">
-                <div className="left-side">
-                  <h4 className="reminder-title">
-                    <strong>{obj.title}</strong>
-                  </h4>
-                  <div className="reminder-data">
-                    <p2>{obj.author}</p2>
-                    <p2>{obj.createdAt}</p2>
-                  </div>
-                  <div className="reminder-content">
-                    <p>{obj.note}</p>
-                  </div>
-                </div>
-                <div className="right-side">
-                  <div className="click-icon">
-                    {obj.isDone ? '' : <img src={checkIcon} alt="checkIcon" />}
-                    <img src={pencilIcon} alt="pencilIcon" />
-                    <img src={binIcon} alt="binIcon" />
-                    <img
-                      src={redBinIcon}
-                      alt="redBinIcon"
-                      onClick={() => handleDelete(obj.id)}
-                    />
-                  </div>
-                  {obj.isDone && (
-                    <div className="green-check-icon">
-                      <img src={checkGreenIcon} alt="checkGreenIcon" />
-                      <p2 className="reminder-data">{obj.doneDate}</p2>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
+            <ToDoItem
+              key={obj.id}
+              obj={obj}
+              refreshFunction={setGetKickComponent}
+            />
           );
         })}
       </div>
-
-      <div className="window-alert">
-        <h4 className="text-alert">
-          <strong>
-            Brawo! Nie masz aktualnie żadnych zadań do zrealizowania.
-          </strong>
-        </h4>
-        <button className="pink-buttons">ODŚWIEŻ WIDOK</button>
-      </div>
+      <button className="add-button" onClick={() => showNewReminderView()}>
+        Dodaj
+      </button>
+      <Congrats />
     </div>
   );
 };
