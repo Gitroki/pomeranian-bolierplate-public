@@ -26,6 +26,7 @@ import { promisesExercisesRouterMetaData } from './PromisesExercises/router-data
 import { promisesExercisesPrRouterMetaData } from './PromisesExercisesPr/router-data';
 import { asyncAwaitRouterMetaData } from './AsyncAwait/router-data';
 import { localDevAndFetchRouterMetaData } from './LocalDevAndFetch/router-data';
+import { toDoWithServerMetaData } from './ToDoWithServer/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -54,5 +55,6 @@ export const blockRouterMetaData = [
   promisesExercisesPrRouterMetaData,
   asyncAwaitRouterMetaData,
   localDevAndFetchRouterMetaData,
+  toDoWithServerMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

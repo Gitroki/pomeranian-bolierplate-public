@@ -1,0 +1,119 @@
+.all-reminder {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+}
+.reminder {
+    display: flex;
+    width: 629px;
+    padding: 18px 24px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 8px;
+    border-left: 5px solid var(--gray-300, #C8CBD1);
+    background: var(--background-bg-primary, #FFF);
+    box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.15), 0px 2px 28px 0px rgba(0, 0, 0, 0.12);
+    flex-direction: column;
+}
+.reminder-done{
+    display: flex;
+    width: 629px;
+    padding: 18px 24px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border-left: 5px solid var(--gray-700, #6B7280);
+    background: var(--gray-300, #C8CBD1);
+    box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.15), 0px 2px 28px 0px rgba(0, 0, 0, 0.12);
+    flex-direction: column;
+}
+.reminder-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   
+}
+.reminder-title {
+    color: var(--secondary-secondary, #23213D);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+}
+.reminder-data {
+    color: var(--gray-700, #6B7280);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+.reminder-content {
+    color: var(--gray-700, #6B7280);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.content-with-icon {
+    display: flex;
+    justify-content: space-between;
+    width: 580px; 
+}
+.left-side{
+    
+}
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.click-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;  
+    
+}
+.green-check-icon {
+    display: flex;
+    justify-content: flex-end;
+  
+}
+.window-alert {
+    display: flex;
+    flex-direction: column;
+}
+.text-alert {
+    width: 395px;
+    color: var(--black-black, #000);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+}
+.pink-buttons {
+    background: #FE3756;
+    display: flex;
+    height: 56px;
+    padding: 20px 36px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid #FE3756;
+    
+    
+}
