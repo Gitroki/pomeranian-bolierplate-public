@@ -6,6 +6,7 @@ import { Congrats } from './Congrats';
 import { ErrorView } from './ErrorView';
 import { Loader } from './Loader';
 import { CreateNewReminder } from './CreateNewReminder';
+import { ToDoEdit } from './ToDoEdit';
 
 export const ToDoWithServer = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
@@ -13,6 +14,8 @@ export const ToDoWithServer = () => {
   const [getIsLoading, setGetIsLoading] = useState(true); //is bo Boolean
   const [getError, setGetError] = useState(null);
   const [getKickComponent, setGetKickComponent] = useState(null);
+  const [isTodoEditVisible, setIsTodoEditVisible] = useState(false);
+  const [editedObject, setEditedObject] = useState(null);
 
   const fetchTodoData = async () => {
     setGetIsLoading(true);
@@ -32,12 +35,6 @@ export const ToDoWithServer = () => {
 
   const showNewReminderView = () => setIsFormVisible(true);
 
-  // function handleDelete(paramId) {
-  //   sendData(`api/todo/${paramId}`, [], 'DELETE').then((response) =>
-  //     setGetKickComponent(response)
-  //   );
-  // }
-
   if (getError) {
     return <ErrorView />;
   }
@@ -50,6 +47,17 @@ export const ToDoWithServer = () => {
     return <CreateNewReminder backFunction={setIsFormVisible} />;
   }
 
+  if (isTodoEditVisible) {
+    return (
+      <ToDoEdit
+        backFunction={setIsTodoEditVisible}
+        refreshFunction={setGetKickComponent}
+        setGetError={setGetError}
+        obj={editedObject}
+      />
+    );
+  }
+
   return (
     <div>
       <div className="all-reminder">
@@ -60,6 +68,8 @@ export const ToDoWithServer = () => {
               key={obj.id}
               obj={obj}
               refreshFunction={setGetKickComponent}
+              setIsTodoEditVisible={setIsTodoEditVisible}
+              setEditedObject={setEditedObject}
             />
           );
         })}

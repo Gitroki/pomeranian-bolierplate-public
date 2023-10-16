@@ -123,25 +123,38 @@
    text-align: center;
 
 }   
+.todo-window {
+  width: 100%;
+}
 .todo-small-window {
     display: flex;
-    width: 488px;
+    
     flex-direction: column;
     align-items: flex-start;
+    font-family: Poppins;
+
 }
 .reminder-input {
     display: flex;
-height: 48px;
-padding: 13px 16px;
-align-items: center;
-gap: 10px;
-align-self: stretch;
-border-radius: 5px;
-border: 1px solid var(--grey-300, #C8CBD1);
-background: #FFF;
+    height: 48px;
+    padding: 13px 16px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 5px;
+    border: 1px solid var(--grey-300, #C8CBD1);
+    background: #FFF;
+    font-family: Poppins;
+}
+.buttons-add-back {
+  display: flex;
+  justify-content: flex-end;
+  gap: 29px;
+justify-content: right;
+margin-top: 30px;
 }
 .add-button {
-
+    
 }
 .back-button {
     

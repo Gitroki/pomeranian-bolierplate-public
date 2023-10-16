@@ -6,7 +6,25 @@ import pencilIcon from './pencilIcon.svg';
 import { useState } from 'react';
 import { sendData } from './api/todoListApi';
 
-export const ToDoItem = ({ obj, handleDelete, refreshFunction }) => {
+// [
+//   {
+//     "id": 0,
+//     "title": "string",
+//     "createdAt": "2023-10-13T15:26:30.463Z",
+//     "author": "string",
+//     "isDone": true,
+//     "note": "string",
+//     "doneDate": "2023-10-13T15:26:30.463Z"
+//   }
+// ]
+
+export const ToDoItem = ({
+  obj,
+  handleDelete,
+  refreshFunction,
+  setIsTodoEditVisible,
+  setEditedObject,
+}) => {
   async function handleDelete(paramId) {
     await sendData(`api/todo/${paramId}`, [], 'DELETE')
       .then((response) => refreshFunction(response))
@@ -14,8 +32,21 @@ export const ToDoItem = ({ obj, handleDelete, refreshFunction }) => {
         setGetError(error);
       });
   }
+  async function reminderIsDone(paramId) {
+    await sendData(`api/todo/${paramId}/markAsDone`, [], 'PUT')
+      .then((response) => refreshFunction(response))
+      .catch((error) => {
+        setGetError(error);
+      });
+  }
 
   const [getError, setGetError] = useState(null);
+
+  function showEditView() {
+    setIsTodoEditVisible(true);
+    setEditedObject(obj);
+  }
+
   return (
     <div className={obj.isDone ? 'reminder-done' : 'reminder'}>
       <div className="reminder-container">
@@ -33,8 +64,20 @@ export const ToDoItem = ({ obj, handleDelete, refreshFunction }) => {
         </div>
         <div className="right-side">
           <div className="click-icon">
-            {obj.isDone ? '' : <img src={checkIcon} alt="checkIcon" />}
-            <img src={pencilIcon} alt="pencilIcon" />
+            {obj.isDone ? (
+              ''
+            ) : (
+              <img
+                onClick={() => reminderIsDone(obj.id)}
+                src={checkIcon}
+                alt="checkIcon"
+              />
+            )}
+            <img
+              onClick={() => showEditView()}
+              src={pencilIcon}
+              alt="pencilIcon"
+            />
             <img src={binIcon} alt="binIcon" />
             <img
               src={redBinIcon}

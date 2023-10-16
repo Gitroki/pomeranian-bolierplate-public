@@ -1,11 +1,8 @@
-
-
-//BASE URL SHLOD BE PLACED ON .env
+//BASE URL SHOULD BE PLACED ON .env
 const BASE_API_URL = 'http://localhost:3333/'
 
 //Tworzenie generycznej/uniwersalnej metody do pobierania danych ze Swagger API
 export const fetchData = async (url) => {
-
     return new Promise(async (resolve, reject) => {
         const response = await fetch(`${BASE_API_URL}${url}`)
         if(response.status === 200){
@@ -18,7 +15,6 @@ export const fetchData = async (url) => {
 
   //Post Request 
 export const sendData = async (url, data, methodParam = "POST") => {
-
     return new Promise(async (resolve, reject) => {
         const options = {
             method: methodParam,
