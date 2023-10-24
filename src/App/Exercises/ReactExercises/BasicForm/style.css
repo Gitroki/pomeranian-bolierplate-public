@@ -1,0 +1,76 @@
+.basic-form {
+    
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: var(--gray-80, #F4F5F7);
+    box-shadow: 0px 65px 30px 0px rgba(0, 0, 0, 0.01), 0px 8px 20px 0px rgba(0, 0, 0, 0.04), 0px 17px 35px 0px rgba(0, 0, 0, 0.05), 0px -4px 26px 0px rgba(0, 0, 0, 0.08);
+    color: var(--text-text-primary, #222);
+    font-family: Poppins;
+}
+.part-of-form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    gap: 22px;
+}
+.square {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    align-self: stretch;
+}
+.option {
+    border-radius: 5px;
+    border: 1px solid var(--grey-300, #C8CBD1);
+    background: #FFF;
+    display: flex;
+    height: 48px;
+    padding: 13px 16px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    width: 400px;
+}
+input[type='radio'] {
+    position: absolute;
+    visibility: hidden;
+}
+input[type='radio']+ .label-class:before {  
+  border: 1px solid #FE3756;
+  background: #F4F5F7;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  border-radius: 100%;
+  cursor: pointer;
+}
+input[type=radio]:checked + .label-class:before {  
+   background-color: #FE3756; 
+   box-shadow: inset 0 0 0 2px #F4F5F7;
+}
+input[type='checkbox'] {
+    background-color: #FE3756;
+    color: white;
+}
+.input-text{
+    width: 400px;
+    display: flex;
+height: 28px;
+padding: 13px 16px;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+}
+.order-button {
+    display: flex;
+width: 420px;
+align-items: flex-start;
+justify-content: center;
+gap: 16px;
+flex-shrink: 0;
+background-color: #FE3756;
+}
